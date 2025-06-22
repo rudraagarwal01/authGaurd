@@ -2,45 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-
-  <title>AuthGuard - Reported Sites</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 15px;
-      max-width: 320px;
-    }
-    h2 {
-      color: #c0392b;
-      margin-top: 0;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-      font-size: 14px;
-      word-break: break-all;
-    }
-    button {
-      margin-top: 15px;
-      background-color: #e74c3c;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-  </style>
+  <title>AuthGuard Popup</title>
 </head>
 <body>
-  <h2>Reported Sites</h2>
-  <ul id="reportedList">Loading...</ul>
-  <button id="clearBtn">Clear All Reports</button>
+  <h2>AuthGuard</h2>
+  <p id="status">Checking current domain...</p>
+  <button id="reportBtn">🚩 Report This Site</button>
+  <button id="viewReportsBtn" style="margin-top:10px;">View Reported Sites</button>
 
-  <script src="reports.js"></script>
+  <script src="popup.js"></script>
 </body>
 </html>

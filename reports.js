@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
       listEl.innerHTML = sites.map(site => `<li>${site}</li>`).join("");
     }
   
-    // Load reports from storage
+    // Load reports from Chrome storage
     chrome.storage.local.get(["reportedSites"], (data) => {
       renderReports(data.reportedSites);
     });
   
-    // Clear reports on button click
+    // Clear all reports on button click
     clearBtn.addEventListener("click", () => {
       chrome.storage.local.set({ reportedSites: [] }, () => {
         renderReports([]);
@@ -23,5 +23,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
   

@@ -1,26 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const listEl = document.getElementById("reportedList");
-    const clearBtn = document.getElementById("clearBtn");
+    const statusEl = document.getElementById("status");
+    const reportBtn = document.getElementById("reportBtn");
+    const viewReportsBtn = document.getElementById("viewReportsBtn");
   
-    function renderReports(sites) {
-      if (!sites || sites.length === 0) {
-        listEl.innerHTML = "<li>No sites reported yet.</li>";
-        return;
-      }
-      listEl.innerHTML = sites.map(site => `<li>${site}</li>`).join("");
-    }
-  
-    // Load reports from Chrome storage
-    chrome.storage.local.get(["reportedSites"], (data) => {
-      renderReports(data.reportedSites);
+    // Display current tab's domain
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      const url = new URL(tabs[0].url);
+      statusEl.textContent = `Current domain: ${url.hostname}`;
     });
   
-    // Clear all reports
-    clearBtn.addEventListener("click", () => {
-      chrome.storage.local.set({ reportedSites: [] }, () => {
-        renderReports([]);
-        alert("All reports cleared.");
+    // Report current site button
+    reportBtn.addEventListener("click", () => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        const domain = new URL(tabs[0].url).hostname;
+  
+        chrome.storage.local.get(["reportedSites"], (data) => {
+          let reported = data.reportedSites || [];
+          if (!reported.includes(domain)) {
+            reported.push(domain);
+            chrome.storage.local.set({ reportedSites: reported }, () => {
+              alert(`✅ ${domain} has been reported.`);
+            });
+          } else {
+            alert("⚠️ You already reported this site.");
+          }
+        });
       });
+    });
+  
+    // View reported sites button
+    viewReportsBtn.addEventListener("click", () => {
+      chrome.tabs.create({ url: chrome.runtime.getURL("reports.html") });
     });
   });
   

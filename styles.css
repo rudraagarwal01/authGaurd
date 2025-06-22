@@ -1,0 +1,57 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    margin: 0;
+    width: 260px;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  h2 {
+    color: #c0392b;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  #result {
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  button {
+    margin-top: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Reported Sites List */
+  ul {
+    padding-left: 18px;
+    margin-top: 10px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    word-wrap: break-word;
+  }
+  

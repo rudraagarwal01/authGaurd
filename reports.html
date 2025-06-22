@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AuthGuard - Reported Sites</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 15px;
+      max-width: 300px;
+    }
+    h2 {
+      color: #c0392b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 12px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Reported Sites</h2>
+  <ul id="reportedList">Loading...</ul>
+  <button id="clearBtn">Clear All Reports</button>
+
+  <script src="reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+code .gitignore
+zsh: command not found: code
+rudraagarwal@Mac authGaurd % .DS_Store
+zsh: command not found: .DS_Store
+rudraagarwal@Mac authGaurd % 
+

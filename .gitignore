@@ -3,3 +3,19 @@ node_modules/
 *.log
 *.zip
 
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.db
+
+# Env files
+.env
+.env.local
+
+# Dashboard build
+dashboard/dist/
+dashboard/node_modules/
+
+# Pytest cache
+.pytest_cache/

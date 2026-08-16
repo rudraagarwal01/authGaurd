@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
-  <title>AuthGuard Popup</title>
+  <title>AuthGuard</title>
 </head>
 <body>
   <h2>AuthGuard</h2>
-  <p id="status">Checking current domain...</p>
+  <p id="status">Checking...</p>
+  <div id="result">
+    <span id="score">Scanning...</span>
+  </div>
+  <p id="flags" class="flags"></p>
+  <p id="source" class="source"></p>
   <button id="reportBtn">🚩 Report This Site</button>
-  <button id="viewReportsBtn" style="margin-top:10px;">View Reported Sites</button>
-
+  <button id="viewReportsBtn">View Reports</button>
   <script src="popup.js"></script>
 </body>
 </html>

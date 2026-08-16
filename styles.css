@@ -43,6 +43,18 @@ body {
     background-color: #c0392b;
   }
   
+  .flags {
+    font-size: 11px;
+    color: #666;
+    margin: 4px 0;
+    word-break: break-word;
+  }
+
+  .source {
+    font-size: 11px;
+    margin: 0 0 4px;
+  }
+
   /* Reported Sites List */
   ul {
     padding-left: 18px;

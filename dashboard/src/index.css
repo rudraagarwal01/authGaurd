@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chart color tokens — used via stroke/fill attributes in Recharts SVG
+   where Tailwind dark: variants can't reach. */
+:root {
+  --chart-grid: #e5e7eb;   /* gray-200 */
+  --chart-text: #9ca3af;   /* gray-400 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chart-grid: #1f2937; /* gray-800 */
+    --chart-text: #6b7280; /* gray-500 */
+  }
+}

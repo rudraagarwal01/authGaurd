@@ -1,3 +1,4 @@
+![Uploading Screenshot 2026-08-16 at 6.50.47 PM.png…]()
 # 🛡️ AuthGuard – Phishing Detection Platform
 
 AuthGuard is a full-stack phishing protection system built around a Chrome extension. It analyzes URLs and webpage content in real time to detect suspicious domains, insecure login forms, and phishing indicators, backed by a FastAPI service, a persistent database, and a React analytics dashboard.
